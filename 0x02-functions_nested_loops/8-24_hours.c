@@ -2,24 +2,30 @@
 
 /**
  *jack_bauer - function that prints every minute of the day.
- *form 00:00 to 23:59
+ *@void: no parameters
  *Return: No Return
  */
 
 void jack_bauer(void)
 {
-int i, j;
-
-for (i = 0 ; i <= 23 ; i++)
+int i, j, k, x, y, w = 9;
+for (i = 0 ; i <= 2 ; i++)
 {
-for (j = 0 ; j <= 59 ; j++)
+if (i == 2)
+w = 3;
+for (j = 0 ; j <= w ; j++)
 {
-_putchar(i / 10 + '0');
-_putchar(i % 10 + '0');
+for (k = 0 ; k <= 59 ; k++)
+{
+_putchar (i + '0');
+_putchar(j + '0');
 _putchar(':');
-_putchar(j / 10 + '0');
-_putchar(j % 10 + '0');
-_putchar('\i');
+x = k / 10;
+y = k % 10;
+_putchar(x + '0');
+_putchar(y + '0');
+_putchar('\n');
+}
 }
 }
 }
