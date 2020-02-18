@@ -9,6 +9,7 @@ int i, j;
 char h;
 for (i = 0; s[i]; i++)
 ;
+i--;
 for (j = 0; j <= i / 2; j++)
 {
 h = s[j];
