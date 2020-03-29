@@ -10,7 +10,7 @@ int a, b, c;
 for (a = 0 ; a < 100 ; a++)
 {
 b = a / 10;
-putchar(b + '0');     
+ putchar(b + '0');
 c = a % 10;
 putchar(c + '0');
 if (a < 99)
