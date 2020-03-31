@@ -14,9 +14,9 @@ int a;
 int k;
 int h;
 file = malloc(sizeof(char) * letters);
-if (filename == NULL)
-return (0);
 if (s == NULL)
+return (0);
+if (filename == NULL)
 return (0);
 a = open(filename, O_RDONLY);
 if (a == -1)
