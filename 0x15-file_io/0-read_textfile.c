@@ -1,31 +1,29 @@
 #include "holberton.h"
 /**
- *read_textfile-  reads a text file and prints it to the stdo.
- *@filename: pointer to a string
- *@letters: byte count
- *Return: zero
+ *read_textfile- function that reads a text file and print it to POSIX
+ *@filename: filename
+ *@letters: number of letters
+ *Return: return 0 or w
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-char *s;
-int a;
-int k;
-int h;
-file = malloc(sizeof(char) * letters);
-if (s == NULL)
-return (0);
-if (filename == NULL)
-return (0);
-a = open(filename, O_RDONLY);
-if (a == -1)
-return (0);
-k = read(a, s, letters);
-if (k == -1)
-return (0);
-h = write(STDOUT_FILENO, s, k);
-if (h == -1)
-return (0);
-close(a);
-free(s);
-return (h);
+  int o, r, w;
+  char *file;
+  file = malloc(sizeof(char) * letters);
+  if (file == NULL)
+    return (0);
+  if (filename == NULL)
+    return (0);
+  o = open(filename, O_RDONLY);
+  if (o == -1)
+    return (0);
+  r = read(o, file, letters);
+  if (r == -1)
+    return (0);
+  w = write(STDOUT_FILENO, file, r);
+  if (w == -1)
+    return (0);
+  close(o);
+  free(file);
+  return (w);
 }
