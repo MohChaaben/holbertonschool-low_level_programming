@@ -24,7 +24,7 @@ return (0);
 k = read(a, s, letters);
 if (k == -1)
 return (0);
-h = write(STDOUT_FILENO, file, k);
+h = write(STDOUT_FILENO, s, k);
 if (h == -1)
 return (0);
 close(a);
