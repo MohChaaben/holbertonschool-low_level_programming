@@ -19,7 +19,7 @@ return (-1);
 a = 0;
 while (a < size)
 {
-if (cmp(array[i]))
+if (cmp(array[a]))
 return (a);
 a++;
 }
